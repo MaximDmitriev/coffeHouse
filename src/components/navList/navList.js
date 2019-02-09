@@ -36,7 +36,7 @@ export default class NavList extends Component {
                 <List>
                     <ListItem>
                         <Link to="/">
-                            <img src={this.props.dark? "logo/Logo_black.svg" : "logo/Logo.svg"} alt="logo"/>
+                            <img src={this.props.dark? process.env.PUBLIC_URL + "/logo/Logo_black.svg" : process.env.PUBLIC_URL + "/logo/Logo.svg"} alt="logo"/>
                         </Link>
                     </ListItem>
                     <ListItem dark={this.props.dark}>

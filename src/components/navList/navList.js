@@ -30,7 +30,7 @@ const ListItem = styled.li`
 export default class NavList extends Component {
 
     render() {
-        console.log(this.props.dark);
+       
         return (
             <>
                 <List>

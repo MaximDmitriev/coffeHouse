@@ -146,11 +146,6 @@ export default class MainPage extends Component {
                         </Row>
                         <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"></img>
                     </Container>
-
-                                {/* <NavList dark={true}/>
-
-                        <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"></img> */}
-
                 </Footer>
             </Wrap>
         )

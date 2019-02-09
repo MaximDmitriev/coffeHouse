@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from "styled-components";
 
 const Wrap = styled.div`
-    width: 220px;
+    width: 230px;
     min-height: 240px;
     margin: 0 auto;
     margin-top: 40px;
@@ -23,15 +23,15 @@ const Wrap = styled.div`
     }
 `
 
-const BestItem = () => {
+const BestItem = ({name, url, price}) => {
     
     return(
         <Wrap>
-            <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee" />
+            <img src={url} alt="coffee" />
             <div className="best__item-title">
-                Solimo Coffee Beans 2kg
+                {name}
             </div>
-            <div className="best__item-price">10.73$</div>
+            <div className="best__item-price">{price}</div>
         </Wrap>
     )
 }

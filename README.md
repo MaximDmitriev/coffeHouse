@@ -1,1 +1,1 @@
-This is React App for Coffe Shop
+This is React App for Coffee Shop

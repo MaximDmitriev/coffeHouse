@@ -90,6 +90,15 @@ const Footer =styled.div`
 `
 
 export default class CoffeePage extends Component {
+
+    state = {
+        country: null
+    }
+
+    onFilter = (country) =>{
+        this.setState({country: country});
+    }
+
     render() {
 
         return(
@@ -139,16 +148,25 @@ export default class CoffeePage extends Component {
                                         Or filter
                                     </div>
                                     <div className="shop__filter-group">
-                                        <button className="shop__filter-btn">Brazil</button>
-                                        <button className="shop__filter-btn">Kenya</button>
-                                        <button className="shop__filter-btn">Columbia</button>
+                                        <button
+                                            onClick={() => this.onFilter("Brazil")}
+                                            className="shop__filter-btn"
+                                                >Brazil</button>
+                                        <button 
+                                            onClick={() => this.onFilter("Kenya")}
+                                            className="shop__filter-btn"
+                                                >Kenya</button>
+                                        <button 
+                                            onClick={() => this.onFilter("Columbia")}
+                                            className="shop__filter-btn"
+                                                >Columbia</button>
                                     </div>
                                 </Filter>
                             </Col>
                         </Row>
                         <Row>
                             <Col lg={{size: 10, offset: 1}}>
-                                <ShopList />
+                                <ShopList filter={this.state.country}/>
                             </Col>
                         </Row>
                     </Container>

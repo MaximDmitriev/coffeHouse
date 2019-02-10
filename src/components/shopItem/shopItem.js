@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 const Item = styled.div`
-    width: 220px;
+    width: 225px;
     min-height: 240px;
     margin: 60px 40px 0 40px;
     padding: 22px 24px;
@@ -27,17 +27,17 @@ const Item = styled.div`
     }
 `
 
-const ShopItem = () => {
+const ShopItem = ({url, name, price, country}) => {
 
 
     return(
         <Item>
-            <img src="https://www.sciencenews.org/sites/default/files/main/articles/100315_coffee_opener_NEW_0.jpg" alt="coffee" />
+            <img src={url} alt="coffee" />
             <div className="item-title">
-                Solimo Coffee Beans 2kg
+                {name}
             </div>
-            <div className="item-country">Brazil</div>
-            <div className="item-price">10.73$</div>
+            <div className="item-country">{country}</div>
+            <div className="item-price">{price}</div>
         </Item>
     )
 

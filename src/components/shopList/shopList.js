@@ -35,9 +35,9 @@ export default class ShopList extends Component {
         }
     }
 
-    searchItems = (array, musk) => {
+    searchItems = (array, mask) => {
         const newArray = array.filter((item) => {
-            return item.name.toLowerCase().indexOf(musk) > -1
+            return item.name.toLowerCase().indexOf(mask) > -1
         });
         return newArray;
     }
@@ -45,9 +45,9 @@ export default class ShopList extends Component {
     render() {
 
         const items = this.state.items;
-        const {filter, musk} = this.props;
+        const {filter, mask} = this.props;
 
-        const itemsFiltered = musk ? this.searchItems(items, musk) : this.filterItems(items, filter);
+        const itemsFiltered = mask ? this.searchItems(items, mask) : this.filterItems(items, filter);
       
         const content = items ? itemsFiltered.map((item) => {
 

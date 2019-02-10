@@ -6,6 +6,7 @@ import coffeeBG from "./Coffee_bg.jpg";
 import coffeeGirl from "./coffee_girl.jpg";
 import NavList from "../../navList/navList";
 import ShopList from "../../shopList/shopList";
+import InfoBlock from "../../infoBlock/infoBlock";
 
 const Wrap = styled.div`
     h1{
@@ -27,17 +28,6 @@ const Banner = styled.div`
 `
 const Shop = styled.div`
     padding: 70px 0 40px 0;
-    .title{
-        margin-top: 10px;
-    }
-    .shop__girl{
-        margin: 0 auto;
-        display: block;
-    }
-    .shop__text{
-        margin-top: 25px;
-        font-size: 14px;
-        text-align: center;
     }
 `
 const Search = styled.form`
@@ -89,20 +79,38 @@ const Footer =styled.div`
     padding: 20px 0;
 `
 
+const Body = () => {
+    return (
+        <>
+            Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
+            <br/><br/>
+            Afraid at highly months do things on at. Situation recommend objection do intention<br/>
+            so questions. <br/>
+            As greatly removed calling pleased improve an. Last ask him cold feel<br/>
+            met spot shy want. Children me laughing we prospect answered followed. At it went<br/>
+            is song that held help face.
+        </>
+    )
+}
+
 export default class CoffeePage extends Component {
 
     state = {
         country: null,
-        musk: null
+        mask: null
     }
+
+    url = coffeeGirl;
+
+    title = "About our beans";
 
     onFilter = (country) =>{
         this.setState({country: country});
     }
 
     onChange = (event) => {
-        const musk = event.target.value.toLowerCase();
-        this.setState({musk: musk});
+        const mask = event.target.value.toLowerCase();
+        this.setState({mask: mask});
     }
 
     render() {
@@ -121,26 +129,7 @@ export default class CoffeePage extends Component {
                 </Banner>
                 <Shop>
                     <Container>
-                        <Row>
-                            <Col lg={{size: 4, offset: 2}}>
-                                <img className="shop__girl" src={coffeeGirl} alt="girl"/>
-                            </Col> 
-                            <Col lg={{size: 4}}>
-                                <div className="title">About our beans</div>
-                                <img className="beanslogo" src={process.env.PUBLIC_URL +"/logo/Beans_logo_dark.svg"} alt="Beans logo"/>
-                                <div className="shop__text">
-                                    Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
-                                    <br/><br/>
-                                    Afraid at highly months do things on at. Situation recommend objection do intention<br/>
-                                    so questions. <br/>
-                                    As greatly removed calling pleased improve an. Last ask him cold feel<br/>
-                                    met spot shy want. Children me laughing we prospect answered followed. At it went<br/>
-                                    is song that held help face.
-                                </div>
-                            </Col>
-                        </Row>
-                        <div className="line"></div>
-
+                        <InfoBlock body={<Body/>} title={this.title} imgUrl={this.url}/>
                         <Row>
                             <Col lg={{size: 4, offset: 2}}>
                                 <Search action="#">
@@ -178,7 +167,7 @@ export default class CoffeePage extends Component {
                             <Col lg={{size: 10, offset: 1}}>
                                 <ShopList 
                                     filter={this.state.country}
-                                    musk={this.state.musk}
+                                    mask={this.state.mask}
                                     />
                             </Col>
                         </Row>
@@ -194,7 +183,6 @@ export default class CoffeePage extends Component {
                         <img className="beanslogo" src={ process.env.PUBLIC_URL + "/logo/Beans_logo_dark.svg"} alt="Beans logo"></img>
                     </Container>
                 </Footer>
-
             </Wrap>
         )
     }

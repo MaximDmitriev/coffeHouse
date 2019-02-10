@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 
-import BestItem from "../bestItem/bestItem";
+// import BestItem from "../bestItem/bestItem";
+import ShopItem from "../shopItem/shopItem";
 import getData from "../../services/getData";
 
 const Wrap = styled.div`
@@ -31,7 +32,7 @@ export default class BestList extends Component {
         const content = items ? items.map((item) => {
 
                 return (
-                    <BestItem 
+                    <ShopItem 
                         name={item.name}
                         url={item.url}
                         price={item.price}

@@ -21,6 +21,11 @@ export default class getData {
         return items.coffee.map(this._transformCoffee);
     }
 
+    getGoods = async () => {
+        const items = await this.download();
+        return items.goods.map(this._transformGoods);
+    }
+
     _transformBest = (items) => {
         return {
             name: items.name,
@@ -38,6 +43,16 @@ export default class getData {
             key: idGenerator("thsallcfe"),
             country: items.country,
             descriptions: items.descriptions
+        }
+    }
+
+    _transformGoods = (items) => {
+        return {
+            name: items.name,
+            url: items.url,
+            price: items.price,
+            key: idGenerator("thsallgds"),
+
         }
     }
 }

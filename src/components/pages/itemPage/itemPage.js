@@ -53,7 +53,7 @@ const Footer = styled.div`
     padding: 20px 0;
 `
 
-const View = ({url, country, description, price}) => {
+const View = ({url, country, description, price, onToggle}) => {
 
     return(
         <>
@@ -67,7 +67,7 @@ const View = ({url, country, description, price}) => {
                     <span>Country: </span>
                     {country}
                 </div>
-                <div className="shop__point">
+                <div onClick={onToggle} className="shop__point">
                     <span>Description: </span>
                     {description}
                 </div>
@@ -78,7 +78,6 @@ const View = ({url, country, description, price}) => {
             </Col>
         </>
     )
-
 }
 
 export default class ItemPage  extends Component {
@@ -86,7 +85,10 @@ export default class ItemPage  extends Component {
     data = new getData();
 
     state = {
-        items: null
+        items: null,
+        descFull: null,
+        descShort: null,
+        show: false
     }
 
     componentWillMount() {
@@ -96,19 +98,34 @@ export default class ItemPage  extends Component {
         this.data.getCoffee().then((res) => {
 
             const index = res.findIndex(item => item.urlId === checkName);
-            this.setState({items: res[index]})
+            const desc = res[index].description.length > 200 ? res[index].description.slice(0, 197) + "..." :
+                                                               res[index].description;
+            this.setState({
+                items: res[index],
+                descFull: res[index].description,
+                descShort: desc
+            });
+        })
+    };
+
+    onToggle = () => {
+        this.setState({
+            // show: !this.state.show
+            show: true
         });
     }
     
     render() {
 
-        const content = this.state.items ? <View 
-                                                url={this.state.items.url}
-                                                price={this.state.items.price}
-                                                description={this.state.items.description}
-                                                country={this.state.items.country}
-                                            /> : null;
+        const {items, descFull, descShort, show} = this.state;
 
+        const content = this.state.items ? <View 
+                                                onToggle={this.onToggle}
+                                                url={items.url}
+                                                price={items.price}
+                                                description={show ? descFull : descShort}
+                                                country={items.country}
+                                            /> : null;
 
         return(
             <Wrap>

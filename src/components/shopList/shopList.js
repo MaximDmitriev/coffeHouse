@@ -57,7 +57,8 @@ export default class ShopList extends Component {
                     url={item.url}
                     price={item.price}
                     country={item.country}
-                    key={item.key} />
+                    key={item.key}
+                    link />
                 )
 
             }) : null;

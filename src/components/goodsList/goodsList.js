@@ -9,17 +9,17 @@ const Wrap = styled.div`
     flex-wrap: wrap;
 `
 
-export default class BestList extends Component {
-
-    state = {
-        items: null        
-    }
+export default class GoogsList extends Component {
 
     data = new getData();
 
-    componentWillMount(){
+    state = {
+        items: null
+    }
 
-        this.data.getBest().then((res) => {
+    componentWillMount() {
+
+        this.data.getGoods().then((res) => {
             this.setState({items: res})
         });
     }
@@ -27,23 +27,23 @@ export default class BestList extends Component {
     render() {
 
         const items = this.state.items;
-        
+     
         const content = items ? items.map((item) => {
 
-                return (
-                    <ShopItem 
-                        name={item.name}
-                        url={item.url}
-                        price={item.price}
-                        key={item.key}
-                        link />
+            return (
+                <ShopItem 
+                    name={item.name}
+                    url={item.url}
+                    price={item.price}
+                    key={item.key}
+                    link={false} />
                 )
 
             }) : null;
 
         return(
             <Wrap>
-                {items ? content : null}
+               {content}
             </Wrap>
         )
     }

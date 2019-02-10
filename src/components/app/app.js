@@ -6,6 +6,8 @@ import MainPage from "../pages/mainPage/mainPage";
 import GoodsPage from "../pages/goodsPage/goodsPage";
 import CoffeePage from "../pages/coffeePage/coffeePage";
 import ContactsPage from "../pages/contactsPage/contactsPage";
+import ItemPage from "../pages/itemPage/itemPage";
+import getData from "../../services/getData";
 
 const AppWrap = styled.div`
 	box-sizing: border-box;
@@ -14,6 +16,10 @@ const AppWrap = styled.div`
 	font-family: 'Merienda';
 	outline: none;
 	overflow-x: hidden;
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
   .title{
     font-size: 24px;
     text-align: center;
@@ -38,6 +44,19 @@ const AppWrap = styled.div`
 
 class App extends Component {
 
+  data = new getData();
+
+  state = {
+      items: null
+  }
+
+  componentWillMount() {
+
+      this.data.getCoffee().then((res) => {
+          this.setState({items: res})
+      });
+  }
+
   render() {
 
     return (
@@ -47,6 +66,7 @@ class App extends Component {
           <Route path="/goods/" exact component={GoodsPage} />
           <Route path="/coffee/" exact component={CoffeePage} />
           <Route path="/contacts/" exact component={ContactsPage} />
+          <Route path="/items/" component={ItemPage} />
         </AppWrap>
       </Router>
 

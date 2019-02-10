@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const Item = styled.div`
     width: 225px;
@@ -11,7 +12,7 @@ const Item = styled.div`
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
     transition: 0.3s all;
     :hover{
-        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25)
+        box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
     }
     img{
         display: block;
@@ -27,20 +28,53 @@ const Item = styled.div`
     }
 `
 
-const ShopItem = ({url, name, price, country}) => {
+const ShopItem = ({url, name, price, country, link}) => {
 
+    const content = link ? <ViewLink 
+                                url={url}
+                                name={name} 
+                                country={country} 
+                                price={price}/> : 
+                            <View 
+                                url={url}
+                                name={name} 
+                                country={country} 
+                                price={price}/>
 
+    return(
+        <>
+            {content}
+        </>
+    )
+
+}
+
+const View = ({url, name, country, price}) => {
+    
     return(
         <Item>
             <img src={url} alt="coffee" />
-            <div className="item-title">
-                {name}
-            </div>
+            <div className="item-title">{name}</div>
             <div className="item-country">{country}</div>
             <div className="item-price">{price}</div>
         </Item>
     )
+}
 
+const ViewLink = ({url, name, country, price}) => {
+    
+    const urlId = "/items/" + name.toLowerCase().split(" ")[0];
+
+    return(
+        <Link to={urlId}>
+            <Item>
+                <img src={url} alt="coffee" />
+                <div className="item-title">{name}</div>
+                <div className="item-country">{country}</div>
+                <div className="item-price">{price}</div>
+            </Item>
+        </Link>
+    )
 }
 
 export default ShopItem;

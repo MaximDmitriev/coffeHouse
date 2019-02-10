@@ -28,7 +28,6 @@ const Banner = styled.div`
 `
 const Shop = styled.div`
     padding: 70px 0 40px 0;
-    }
 `
 const Search = styled.form`
     label{

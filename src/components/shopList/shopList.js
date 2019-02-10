@@ -35,12 +35,21 @@ export default class ShopList extends Component {
         }
     }
 
+    searchItems = (array, musk) => {
+        const newArray = array.filter((item) => {
+            return item.name.toLowerCase().indexOf(musk) > -1
+        });
+        return newArray;
+    }
+
     render() {
 
         const items = this.state.items;
-        const filter = this.props.filter;
+        const {filter, musk} = this.props;
+
+        const itemsFiltered = musk ? this.searchItems(items, musk) : this.filterItems(items, filter);
       
-        const content = items ? this.filterItems(items, filter).map((item) => {
+        const content = items ? itemsFiltered.map((item) => {
 
             return (
                 <ShopItem 

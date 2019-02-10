@@ -92,11 +92,17 @@ const Footer =styled.div`
 export default class CoffeePage extends Component {
 
     state = {
-        country: null
+        country: null,
+        musk: null
     }
 
     onFilter = (country) =>{
         this.setState({country: country});
+    }
+
+    onChange = (event) => {
+        const musk = event.target.value.toLowerCase();
+        this.setState({musk: musk});
     }
 
     render() {
@@ -139,7 +145,11 @@ export default class CoffeePage extends Component {
                             <Col lg={{size: 4, offset: 2}}>
                                 <Search action="#">
                                     <label htmlFor="filter">Looking for</label>
-                                    <input id="filter" type="text" placeholder="start typing here..." />
+                                    <input
+                                        onChange={this.onChange} 
+                                        id="filter" 
+                                        type="text" 
+                                        placeholder="start typing here..." />
                                 </Search>
                             </Col>
                             <Col lg={{size: 4}}>
@@ -166,7 +176,10 @@ export default class CoffeePage extends Component {
                         </Row>
                         <Row>
                             <Col lg={{size: 10, offset: 1}}>
-                                <ShopList filter={this.state.country}/>
+                                <ShopList 
+                                    filter={this.state.country}
+                                    musk={this.state.musk}
+                                    />
                             </Col>
                         </Row>
                     </Container>

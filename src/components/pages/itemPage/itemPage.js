@@ -25,7 +25,7 @@ const Shop = styled.div`
         margin-top: 16px;
         span{
             font-weight: bold;
-        } 
+        }
         .shop__point-price{
             font-size: 24px;
             font-weight: normal !important;
@@ -58,7 +58,7 @@ const View = ({url, country, description, price, onToggle}) => {
                     <span>Country: </span>
                     {country}
                 </div>
-                <div onClick={onToggle} className="shop__point">
+                <div onClick={onToggle} className="shop__point" style={{cursor: "pointer"}}>
                     <span>Description: </span>
                     {description}
                 </div>
@@ -109,13 +109,13 @@ export default class ItemPage  extends Component {
             show: true
         });
     }
-    
+
     render() {
 
         const {items, descFull, descShort, show, loading} = this.state;
 
-        const content = loading ? <Spinner style={{ width: '3rem', height: '3rem', margin: '70px auto' }} /> : 
-                        this.state.items ? <View 
+        const content = loading ? <Spinner style={{ width: '3rem', height: '3rem', margin: '70px auto' }} /> :
+                        this.state.items ? <View
                                                 onToggle={this.onToggle}
                                                 url={items.url}
                                                 price={items.price}

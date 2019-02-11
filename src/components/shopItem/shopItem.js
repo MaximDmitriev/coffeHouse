@@ -11,6 +11,7 @@ const Item = styled.div`
     border-radius: 8px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
     transition: 0.3s all;
+    cursor: pointer;
     :hover{
         box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
     }
@@ -18,7 +19,7 @@ const Item = styled.div`
         display: block;
         margin: 0 auto;
         width: 151px;
-        height: 130px; 
+        height: 130px;
         object-fit: cover;
     }
     .item-title, .item-price, .item-country{
@@ -30,15 +31,15 @@ const Item = styled.div`
 
 const ShopItem = ({url, name, price, country, link}) => {
 
-    const content = link ? <ViewLink 
+    const content = link ? <ViewLink
                                 url={url}
-                                name={name} 
-                                country={country} 
-                                price={price}/> : 
-                            <View 
+                                name={name}
+                                country={country}
+                                price={price}/> :
+                            <View
                                 url={url}
-                                name={name} 
-                                country={country} 
+                                name={name}
+                                country={country}
                                 price={price}/>
 
     return(
@@ -50,7 +51,7 @@ const ShopItem = ({url, name, price, country, link}) => {
 }
 
 const View = ({url, name, country, price}) => {
-    
+
     return(
         <Item>
             <img src={url} alt="coffee" />
@@ -62,7 +63,7 @@ const View = ({url, name, country, price}) => {
 }
 
 const ViewLink = ({url, name, country, price}) => {
-    
+
     const urlId = "/items/" + name.toLowerCase().split(" ")[0];
 
     return(

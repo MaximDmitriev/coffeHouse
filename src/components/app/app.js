@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import styled from "styled-components";
 
 import MainPage from "../pages/mainPage/mainPage";
@@ -7,6 +7,7 @@ import GoodsPage from "../pages/goodsPage/goodsPage";
 import CoffeePage from "../pages/coffeePage/coffeePage";
 import ContactsPage from "../pages/contactsPage/contactsPage";
 import ItemPage from "../pages/itemPage/itemPage";
+import Page404 from "../pages/page404/page404";
 import getData from "../../services/getData";
 
 const AppWrap = styled.div`
@@ -52,14 +53,14 @@ class App extends Component {
   data = new getData();
 
   state = {
-      items: null
+    items: null
   }
 
   componentWillMount() {
 
-      this.data.getCoffee().then((res) => {
-          this.setState({items: res})
-      });
+    this.data.getCoffee().then((res) => {
+      this.setState({items: res})
+    });
   }
 
   render() {
@@ -67,11 +68,14 @@ class App extends Component {
     return (
       <Router>
         <AppWrap>
-          <Route path="/" exact component={MainPage} />
-          <Route path="/goods/" exact component={GoodsPage} />
-          <Route path="/coffee/" exact component={CoffeePage} />
-          <Route path="/contacts/" exact component={ContactsPage} />
-          <Route path="/items/" component={ItemPage} />
+          <Switch>
+            <Route path="/" exact component={MainPage} />
+            <Route path="/goods/" exact component={GoodsPage} />
+            <Route path="/coffee/" exact component={CoffeePage} />
+            <Route path="/contacts/" exact component={ContactsPage} />
+            <Route path="/items/" component={ItemPage} />
+            <Route component={Page404} />
+          </Switch>
         </AppWrap>
       </Router>
 

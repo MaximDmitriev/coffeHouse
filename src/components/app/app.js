@@ -20,6 +20,11 @@ const AppWrap = styled.div`
     color: inherit;
     text-decoration: none;
   }
+  button{
+    :active, :focus{
+      outline: none;
+    }
+  }
   .title{
     font-size: 24px;
     text-align: center;

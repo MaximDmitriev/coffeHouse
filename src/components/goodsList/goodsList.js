@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
+import { Spinner } from "reactstrap";
 
 import ShopItem from "../shopItem/shopItem";
 import getData from "../../services/getData";
@@ -14,13 +15,19 @@ export default class GoogsList extends Component {
     data = new getData();
 
     state = {
-        items: null
+        items: null,
+        loading: false
     }
 
     componentWillMount() {
 
+        this.setState({loading: true})
+
         this.data.getGoods().then((res) => {
-            this.setState({items: res})
+            this.setState({
+                items: res,
+                loading: false
+            })
         });
     }
 
@@ -28,7 +35,8 @@ export default class GoogsList extends Component {
 
         const items = this.state.items;
      
-        const content = items ? items.map((item) => {
+        const content = this.state.loading ? <Spinner style={{ width: '3rem', height: '3rem', margin: '70px auto' }} /> :
+                        items ? items.map((item) => {
 
             return (
                 <ShopItem 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
+import { Spinner } from "reactstrap";
 
 import ShopItem from "../shopItem/shopItem";
 import getData from "../../services/getData";
@@ -14,13 +15,19 @@ export default class ShopList extends Component {
     data = new getData();
 
     state = {
-        items: null
+        items: null,
+        loading: false
     }
 
     componentWillMount() {
 
+        this.setState({loading: true})
+
         this.data.getCoffee().then((res) => {
-            this.setState({items: res})
+            this.setState({
+                items: res,
+                loading: false
+            })
         });
     }
 
@@ -49,7 +56,8 @@ export default class ShopList extends Component {
 
         const itemsFiltered = mask ? this.searchItems(items, mask) : this.filterItems(items, filter);
       
-        const content = items ? itemsFiltered.map((item) => {
+        const content = this.state.loading ? <Spinner style={{ width: '3rem', height: '3rem', margin: '70px auto' }} /> :
+                        items ? itemsFiltered.map((item) => {
 
             return (
                 <ShopItem 

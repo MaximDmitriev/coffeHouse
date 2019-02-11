@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, Spinner } from "reactstrap";
 
 import coffeeBG from "./Coffee_bg.jpg";
 import NavList from "../../navList/navList";
@@ -85,6 +85,7 @@ export default class ItemPage  extends Component {
     data = new getData();
 
     state = {
+        loading: false,
         items: null,
         descFull: null,
         descShort: null,
@@ -92,6 +93,8 @@ export default class ItemPage  extends Component {
     }
 
     componentWillMount() {
+
+        this.setState({loading: true});
 
         const checkName = this.props.history.location.pathname.replace("/items/", "");
 
@@ -101,6 +104,7 @@ export default class ItemPage  extends Component {
             const desc = res[index].description.length > 200 ? res[index].description.slice(0, 197) + "..." :
                                                                res[index].description;
             this.setState({
+                loading: false,
                 items: res[index],
                 descFull: res[index].description,
                 descShort: desc
@@ -117,9 +121,10 @@ export default class ItemPage  extends Component {
     
     render() {
 
-        const {items, descFull, descShort, show} = this.state;
+        const {items, descFull, descShort, show, loading} = this.state;
 
-        const content = this.state.items ? <View 
+        const content = loading ? <Spinner style={{ width: '3rem', height: '3rem', margin: '70px auto' }} /> : 
+                        this.state.items ? <View 
                                                 onToggle={this.onToggle}
                                                 url={items.url}
                                                 price={items.price}

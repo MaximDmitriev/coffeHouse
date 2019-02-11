@@ -4,9 +4,10 @@ import { Container, Row, Col } from "reactstrap";
 
 import coffeeBG from "./coffeeBG.jpg";
 import coffeeCup from "./coffeeCup.jpg";
-import NavList from "../../navList/navList";
 import GoodsList from "../../goodsList/goodsList";
 import InfoBlock from "../../infoBlock/infoBlock";
+import Footer from "../../footer/footer";
+import Header from "../../header/header";
 
 const Wrap = styled.div`
     h1{
@@ -18,19 +19,8 @@ const Wrap = styled.div`
         margin-top: 20px;
     }
 `
-const Banner = styled.div`
-    height: 260px;
-    background: url(${coffeeBG}) center center no-repeat;
-    background-size: cover;
-    .title-big{
-        margin-top: 60px;
-    }
-`
 const Shop = styled.div`
     padding: 70px 0 40px 0;
-`
-const Footer =styled.div`
-    padding: 20px 0;
 `
 
 const Body = () => {
@@ -62,16 +52,7 @@ export default class GoodsPage extends Component {
 
         return(
             <Wrap>
-                <Banner>
-                    <Container>
-                        <Row>
-                            <Col lg={{size: 7, offset: 0}}>
-                                <NavList dark={false}/>
-                            </Col>
-                        </Row>
-                        <h1 className="title-big">For your pleasure</h1>
-                    </Container>
-                </Banner>
+                <Header title={"For your pleasure"} url={coffeeBG}/>
                 <Shop>
                     <Container>
                         <InfoBlock body={<Body/>} title={this.title} imgUrl={this.url}/>
@@ -82,17 +63,7 @@ export default class GoodsPage extends Component {
                         </Row>
                     </Container>
                 </Shop>
-                <Footer>
-                    <Container>
-                        <Row>
-                            <Col lg={{size: 6, offset: 3}}>
-                                <NavList dark={true}/>
-                            </Col>
-                        </Row>
-                        <img className="beanslogo" src={ process.env.PUBLIC_URL + "/logo/Beans_logo_dark.svg"} alt="Beans logo"></img>
-                    </Container>
-                </Footer>
-
+                <Footer />
             </Wrap>
         )
     }

@@ -3,8 +3,10 @@ import styled from "styled-components";
 import { Container, Row, Col, Spinner } from "reactstrap";
 
 import coffeeBG from "./Coffee_bg.jpg";
-import NavList from "../../navList/navList";
 import getData from "../../../services/getData";
+import Footer from "../../footer/footer";
+import Header from "../../header/header";
+
 
 
 const Wrap = styled.div`
@@ -15,14 +17,6 @@ const Wrap = styled.div`
         display: block;
         margin: 0 auto;
         margin-top: 20px;
-    }
-`
-const Banner = styled.div`
-    height: 260px;
-    background: url(${coffeeBG}) center center no-repeat;
-    background-size: cover;
-    .title-big{
-        margin-top: 60px;
     }
 `
 const Shop = styled.div`
@@ -48,9 +42,6 @@ const Shop = styled.div`
         margin: 0 auto;
         width: 100%;
     }
-`
-const Footer = styled.div`
-    padding: 20px 0;
 `
 
 const View = ({url, country, description, price, onToggle}) => {
@@ -134,16 +125,7 @@ export default class ItemPage  extends Component {
 
         return(
             <Wrap>
-                <Banner>
-                    <Container>
-                        <Row>
-                            <Col lg={{size: 7, offset: 0}}>
-                                <NavList dark={false}/>
-                            </Col>
-                        </Row>
-                        <h1 className="title-big">Our Coffee</h1>
-                    </Container>
-                </Banner>
+                <Header title={"Our Coffee"} url={coffeeBG}/>
                 <Shop>
                     <Container>
                         <Row>
@@ -151,16 +133,7 @@ export default class ItemPage  extends Component {
                         </Row>
                     </Container>
                 </Shop>
-                <Footer>
-                    <Container>
-                        <Row>
-                            <Col lg={{size: 6, offset: 3}}>
-                                <NavList dark={true}/>
-                            </Col>
-                        </Row>
-                        <img className="beanslogo" src={process.env.PUBLIC_URL + "/logo/Beans_logo_dark.svg"} alt="Beans logo"></img>
-                    </Container>
-                </Footer>
+                <Footer />
             </Wrap>
         )
     }

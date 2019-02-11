@@ -7,6 +7,7 @@ import mainBG from "./Main_bg.jpg";
 import paper from "./paper.jpg"
 import NavList from "../../navList/navList";
 import BestList from "../../bestList/bestList";
+import Footer from "../../footer/footer";
 
 const Wrap = styled.div`
     h1{
@@ -74,9 +75,6 @@ const Best = styled.div`
     background: url(${paper}) center center no-repeat;
     background-size: cover;
 `
-const Footer =styled.div`
-    padding: 20px 0;
-`
 
 export default class MainPage extends Component {
     render() {
@@ -137,16 +135,7 @@ export default class MainPage extends Component {
                         </Row>
                     </Container>
                 </Best>
-                <Footer>
-                    <Container>
-                        <Row>
-                            <Col lg={{size: 6, offset: 3}}>
-                                <NavList dark={true}/>
-                            </Col>
-                        </Row>
-                        <img className="beanslogo" src="logo/Beans_logo_dark.svg" alt="Beans logo"></img>
-                    </Container>
-                </Footer>
+                <Footer />
             </Wrap>
         )
     }

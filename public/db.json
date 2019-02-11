@@ -82,34 +82,5 @@
       "price": "45.99$"
     }
   ],
-  "contacts": [
-    {
-      "name": "Максим Дмитриев",
-      "email": "maximv.dmitriev@gmail.com",
-      "phone": "9264557982",
-      "msg": "sdf",
-      "id": 1
-    },
-    {
-      "name": "Максим Дмитриев",
-      "email": "maximv.dmitriev@gmail.com",
-      "phone": "9264557982",
-      "msg": "asdf",
-      "id": 2
-    },
-    {
-      "name": "Максим Дмитриев",
-      "email": "maximv.dmitriev@gmail.com",
-      "phone": "9264557982",
-      "msg": "qwe",
-      "id": 3
-    },
-    {
-      "name": "Максим Дмитриев",
-      "email": "maximv.dmitriev@gmail.com",
-      "phone": "9264557982",
-      "msg": "qwqw",
-      "id": 4
-    }
-  ]
+  "contacts": []
 }

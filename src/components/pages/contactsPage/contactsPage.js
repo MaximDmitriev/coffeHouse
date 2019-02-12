@@ -5,6 +5,7 @@ import coffeeContact from "./coffeeContact.jpg";
 import Footer from "../../footer/footer";
 import Header from "../../header/header";
 import ContactForm from "../../contactForm/contactForm";
+import ErrorComponent from "../../ErrorComponent/errorComponent";
 import vectorIMG from "./Vector.svg";
 import back from "./back-arrow.svg";
 
@@ -57,16 +58,28 @@ const Flex = styled.div`
 export default class ContactsPage extends Component {
 
   state = {
-    show: true
+    show: true,
+    error: false
   }
 
   onToggle = () => {
     this.setState({show: !this.state.show});
   }
 
+  componentDidCatch(){
+    this.setState({
+      loading: false,
+      error: true
+    })
+  }
+
+
   render() {
 
-    const content = this.state.show ? <ContactForm onToggle={this.onToggle}/> : <ViewAnswer onToggle={this.onToggle}/>
+    // this.foo.bar = 0;
+
+    const content = this.state.error ? <ErrorComponent /> :
+                    this.state.show ? <ContactForm onToggle={this.onToggle}/> : <ViewAnswer onToggle={this.onToggle}/>
 
     return(
       <Wrap>
@@ -87,16 +100,16 @@ const ViewAnswer = ({onToggle}) => {
   return(
     <>
       <div className="title_thks">
-          Thank you so much <br />
-          We contact you as soon as posible
+        Thank you so much <br />
+        We contact you as soon as posible
       </div>
       <div className="img_wrap">
-          <img src={vectorIMG} alt="thanks"/>
+        <img src={vectorIMG} alt="thanks"/>
       </div>
       <button
-          style={{padding: 0}}
-          onClick={onToggle}>
-          Another ? <img src={back} alt="back"/>
+        style={{padding: 0}}
+        onClick={onToggle}>
+        Another ? <img src={back} alt="back"/>
       </button>
     </>
   )

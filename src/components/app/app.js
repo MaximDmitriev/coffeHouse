@@ -8,7 +8,6 @@ import CoffeePage from "../pages/coffeePage/coffeePage";
 import ContactsPage from "../pages/contactsPage/contactsPage";
 import ItemPage from "../pages/itemPage/itemPage";
 import Page404 from "../pages/page404/page404";
-import getData from "../../services/getData";
 
 const AppWrap = styled.div`
 	box-sizing: border-box;
@@ -50,35 +49,41 @@ const AppWrap = styled.div`
 
 class App extends Component {
 
-  data = new getData();
-
   state = {
-    items: null
+    error: false,
+    components: ["MainPage", "GoodsPage", "CoffeePage", "ContactsPage", "ItemPage"]
   }
 
-  componentWillMount() {
+  componentDidCatch(errorString, errorInfo) {
 
-    this.data.getCoffee().then((res) => {
-      this.setState({items: res})
+    this.state.components.forEach((item) => {
+
+      if(errorInfo.componentStack.includes(item)) {
+
+        this.setState({
+          error: item
+        })
+      }
     });
   }
 
   render() {
 
+    const name = this.state.error;
+
     return (
       <Router>
         <AppWrap>
           <Switch>
-            <Route path="/" exact component={MainPage} />
-            <Route path="/goods/" exact component={GoodsPage} />
-            <Route path="/coffee/" exact component={CoffeePage} />
-            <Route path="/contacts/" exact component={ContactsPage} />
-            <Route path="/items/" component={ItemPage} />
+            <Route path="/" exact component={name === "MainPage" ? Page404 : MainPage} />
+            <Route path="/goods/" exact component={name === "GoodsPage" ? Page404 : GoodsPage} />
+            <Route path="/coffee/" exact component={name === "CoffeePage" ? Page404 : CoffeePage} />
+            <Route path="/contacts/" exact component={name === "ContactsPage" ? Page404 : ContactsPage} />
+            <Route path="/items/" component={name === "ItemPage" ? Page404 : ItemPage} />
             <Route component={Page404} />
           </Switch>
         </AppWrap>
       </Router>
-
     );
   }
 }

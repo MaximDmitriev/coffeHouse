@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from "styled-components";
 import { Spinner, Tooltip } from "reactstrap";
 
+import ErrorComponent from "../ErrorComponent/errorComponent";
 import {mask} from "../../services/mask";
 import getData from "../../services/getData";
 
@@ -73,6 +74,7 @@ export default class ContactForm extends Component {
 
   state = {
     loading: false,
+    error: null,
     tooltipName: false,
     tooltipEmail: false,
     tooltipMsg: false,
@@ -160,16 +162,28 @@ export default class ContactForm extends Component {
       if(res.ok) {
         this.props.onToggle();
       }
+    })
+    .catch((res) => {
+      this.setState({
+        loading: false,
+        error: res.message
+      })
     });
-
   }
 
   componentDidMount() {
+    // this.foo.bar = 0;
 
     if(!this.state.loading) mask(this.refs.phone);
   }
 
   render() {
+
+    if(this.state.error) {
+      return(
+        <ErrorComponent message={this.state.error} />
+      )
+    }
 
     if(this.state.loading) {
 

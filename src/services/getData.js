@@ -8,6 +8,10 @@ export default class getData {
 
     const data = await fetch(this.url);
 
+    if(!data.ok) {
+      return (data);
+  }
+
     return await data.json();
   }
 
@@ -67,7 +71,15 @@ export default class getData {
       headers: {
           "Content-Type": "application/json"
       }
+    })
+    .catch(res => {
+      throw new Error("server", res.status);
+
     });
+
+    if(!res.ok) {
+      throw new Error(res.status);
+    }
 
     return res;
   }

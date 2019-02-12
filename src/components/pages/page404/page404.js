@@ -27,7 +27,7 @@ const Page404 = () => {
       <div className="title">Page not found</div>
       <img className="beanslogo" src={process.env.PUBLIC_URL +"/logo/Beans_logo_dark.svg"} alt="Beans logo"/>
       <Footer/>
-  </Wrap>
+    </Wrap>
   )
 }
 

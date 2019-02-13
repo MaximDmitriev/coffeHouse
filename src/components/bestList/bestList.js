@@ -15,7 +15,8 @@ export default class BestList extends Component {
 
   state = {
     items: null,
-    loading: false
+    loading: false,
+    error: null
   }
 
   data = new getData();

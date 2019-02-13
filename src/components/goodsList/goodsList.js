@@ -21,7 +21,7 @@ export default class GoogsList extends Component {
     error: null
   }
 
-  componentWillMount() {
+  componentDidMount() {
 
     this.setState({loading: true})
 

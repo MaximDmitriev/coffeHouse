@@ -1,0 +1,1223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <ContactForm /> Testing ContactForm & state ContactForm have rendered 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ContactForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef>
+          <label
+            htmlFor="name"
+          >
+            Name
+            <span>
+              *
+            </span>
+          </label>
+          <input
+            id="name"
+            type="text"
+          />
+          <Tooltip
+            autohide={true}
+            isOpen={false}
+            placement="right"
+            placementPrefix="bs-tooltip"
+            target="name"
+            toggle={[Function]}
+            trigger="click hover focus"
+          >
+            Enter name
+          </Tooltip>
+        </ForwardRef>,
+        <ForwardRef>
+          <label
+            htmlFor="email"
+          >
+            E-mail
+            <span>
+              *
+            </span>
+          </label>
+          <input
+            id="email"
+            type="email"
+          />
+          <Tooltip
+            autohide={true}
+            className="secondary"
+            isOpen={false}
+            placement="right"
+            placementPrefix="bs-tooltip"
+            target="email"
+            toggle={[Function]}
+            trigger="click hover focus"
+          >
+            Enter e-mail
+          </Tooltip>
+        </ForwardRef>,
+        <ForwardRef>
+          <label
+            htmlFor="phone"
+          >
+            Phone
+          </label>
+          <input
+            id="phone"
+            placeholder="+7(___) ___-____"
+            type="text"
+          />
+        </ForwardRef>,
+        <div
+          className="subtitle"
+        >
+          Your message
+          <span>
+            *
+          </span>
+        </div>,
+        <textarea
+          id="msg"
+          name="msg"
+          placeholder="Tell us..."
+        />,
+        <Tooltip
+          autohide={true}
+          isOpen={false}
+          placement="top"
+          placementPrefix="bs-tooltip"
+          target="msg"
+          toggle={[Function]}
+          trigger="click hover focus"
+        >
+          Enter message
+        </Tooltip>,
+        <button
+          onClick={[Function]}
+        >
+          Send us
+        </button>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="name"
+            >
+              Name
+              <span>
+                *
+              </span>
+            </label>,
+            <input
+              id="name"
+              type="text"
+            />,
+            <Tooltip
+              autohide={true}
+              isOpen={false}
+              placement="right"
+              placementPrefix="bs-tooltip"
+              target="name"
+              toggle={[Function]}
+              trigger="click hover focus"
+            >
+              Enter name
+            </Tooltip>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Name",
+                <span>
+                  *
+                </span>,
+              ],
+              "htmlFor": "name",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Name",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "*",
+                },
+                "ref": null,
+                "rendered": "*",
+                "type": "span",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "name",
+              "type": "text",
+            },
+            "ref": "name",
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "autohide": true,
+              "children": "Enter name",
+              "isOpen": false,
+              "placement": "right",
+              "placementPrefix": "bs-tooltip",
+              "target": "name",
+              "toggle": [Function],
+              "trigger": "click hover focus",
+            },
+            "ref": null,
+            "rendered": "Enter name",
+            "type": [Function],
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  label{
+    font-size: 18px;
+  }
+  input{
+    width: 220px;
+    height: 30px ;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0 15px;
+    ::placeholder{
+      text-align: left;
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="email"
+            >
+              E-mail
+              <span>
+                *
+              </span>
+            </label>,
+            <input
+              id="email"
+              type="email"
+            />,
+            <Tooltip
+              autohide={true}
+              className="secondary"
+              isOpen={false}
+              placement="right"
+              placementPrefix="bs-tooltip"
+              target="email"
+              toggle={[Function]}
+              trigger="click hover focus"
+            >
+              Enter e-mail
+            </Tooltip>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "E-mail",
+                <span>
+                  *
+                </span>,
+              ],
+              "htmlFor": "email",
+            },
+            "ref": null,
+            "rendered": Array [
+              "E-mail",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "*",
+                },
+                "ref": null,
+                "rendered": "*",
+                "type": "span",
+              },
+            ],
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "email",
+              "type": "email",
+            },
+            "ref": "email",
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "autohide": true,
+              "children": "Enter e-mail",
+              "className": "secondary",
+              "isOpen": false,
+              "placement": "right",
+              "placementPrefix": "bs-tooltip",
+              "target": "email",
+              "toggle": [Function],
+              "trigger": "click hover focus",
+            },
+            "ref": null,
+            "rendered": "Enter e-mail",
+            "type": [Function],
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  label{
+    font-size: 18px;
+  }
+  input{
+    width: 220px;
+    height: 30px ;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0 15px;
+    ::placeholder{
+      text-align: left;
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <label
+              htmlFor="phone"
+            >
+              Phone
+            </label>,
+            <input
+              id="phone"
+              placeholder="+7(___) ___-____"
+              type="text"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Phone",
+              "htmlFor": "phone",
+            },
+            "ref": null,
+            "rendered": "Phone",
+            "type": "label",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "id": "phone",
+              "placeholder": "+7(___) ___-____",
+              "type": "text",
+            },
+            "ref": "phone",
+            "rendered": null,
+            "type": "input",
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "rules": Array [
+              "
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  label{
+    font-size: 18px;
+  }
+  input{
+    width: 220px;
+    height: 30px ;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0 15px;
+    ::placeholder{
+      text-align: left;
+    }
+  }
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Your message",
+            <span>
+              *
+            </span>,
+          ],
+          "className": "subtitle",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Your message",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "*",
+            },
+            "ref": null,
+            "rendered": "*",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "id": "msg",
+          "name": "msg",
+          "placeholder": "Tell us...",
+        },
+        "ref": "msg",
+        "rendered": null,
+        "type": "textarea",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "autohide": true,
+          "children": "Enter message",
+          "isOpen": false,
+          "placement": "top",
+          "placementPrefix": "bs-tooltip",
+          "target": "msg",
+          "toggle": [Function],
+          "trigger": "click hover focus",
+        },
+        "ref": null,
+        "rendered": "Enter message",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Send us",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Send us",
+        "type": "button",
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bwzfXH",
+        "isStatic": true,
+        "rules": Array [
+          "
+  width: 410px;
+  height: 430px;
+  margin: 40px auto;
+  span{
+    color: red;
+  }
+  button{
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 6px 30px;
+    font-size: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  .subtitle{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  textarea{
+    width: 350px;
+    height: 120px;
+    margin-bottom: 40px;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    resize: none;
+    ::placeholder{
+      text-align: left;
+      font-size: 14px;
+    }
+  }
+",
+        ],
+      },
+      "displayName": "styled.div",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef>
+            <label
+              htmlFor="name"
+            >
+              Name
+              <span>
+                *
+              </span>
+            </label>
+            <input
+              id="name"
+              type="text"
+            />
+            <Tooltip
+              autohide={true}
+              isOpen={false}
+              placement="right"
+              placementPrefix="bs-tooltip"
+              target="name"
+              toggle={[Function]}
+              trigger="click hover focus"
+            >
+              Enter name
+            </Tooltip>
+          </ForwardRef>,
+          <ForwardRef>
+            <label
+              htmlFor="email"
+            >
+              E-mail
+              <span>
+                *
+              </span>
+            </label>
+            <input
+              id="email"
+              type="email"
+            />
+            <Tooltip
+              autohide={true}
+              className="secondary"
+              isOpen={false}
+              placement="right"
+              placementPrefix="bs-tooltip"
+              target="email"
+              toggle={[Function]}
+              trigger="click hover focus"
+            >
+              Enter e-mail
+            </Tooltip>
+          </ForwardRef>,
+          <ForwardRef>
+            <label
+              htmlFor="phone"
+            >
+              Phone
+            </label>
+            <input
+              id="phone"
+              placeholder="+7(___) ___-____"
+              type="text"
+            />
+          </ForwardRef>,
+          <div
+            className="subtitle"
+          >
+            Your message
+            <span>
+              *
+            </span>
+          </div>,
+          <textarea
+            id="msg"
+            name="msg"
+            placeholder="Tell us..."
+          />,
+          <Tooltip
+            autohide={true}
+            isOpen={false}
+            placement="top"
+            placementPrefix="bs-tooltip"
+            target="msg"
+            toggle={[Function]}
+            trigger="click hover focus"
+          >
+            Enter message
+          </Tooltip>,
+          <button
+            onClick={[Function]}
+          >
+            Send us
+          </button>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="name"
+              >
+                Name
+                <span>
+                  *
+                </span>
+              </label>,
+              <input
+                id="name"
+                type="text"
+              />,
+              <Tooltip
+                autohide={true}
+                isOpen={false}
+                placement="right"
+                placementPrefix="bs-tooltip"
+                target="name"
+                toggle={[Function]}
+                trigger="click hover focus"
+              >
+                Enter name
+              </Tooltip>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Name",
+                  <span>
+                    *
+                  </span>,
+                ],
+                "htmlFor": "name",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Name",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "*",
+                  },
+                  "ref": null,
+                  "rendered": "*",
+                  "type": "span",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "name",
+                "type": "text",
+              },
+              "ref": "name",
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "autohide": true,
+                "children": "Enter name",
+                "isOpen": false,
+                "placement": "right",
+                "placementPrefix": "bs-tooltip",
+                "target": "name",
+                "toggle": [Function],
+                "trigger": "click hover focus",
+              },
+              "ref": null,
+              "rendered": "Enter name",
+              "type": [Function],
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  label{
+    font-size: 18px;
+  }
+  input{
+    width: 220px;
+    height: 30px ;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0 15px;
+    ::placeholder{
+      text-align: left;
+    }
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="email"
+              >
+                E-mail
+                <span>
+                  *
+                </span>
+              </label>,
+              <input
+                id="email"
+                type="email"
+              />,
+              <Tooltip
+                autohide={true}
+                className="secondary"
+                isOpen={false}
+                placement="right"
+                placementPrefix="bs-tooltip"
+                target="email"
+                toggle={[Function]}
+                trigger="click hover focus"
+              >
+                Enter e-mail
+              </Tooltip>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "E-mail",
+                  <span>
+                    *
+                  </span>,
+                ],
+                "htmlFor": "email",
+              },
+              "ref": null,
+              "rendered": Array [
+                "E-mail",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "*",
+                  },
+                  "ref": null,
+                  "rendered": "*",
+                  "type": "span",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "email",
+                "type": "email",
+              },
+              "ref": "email",
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "autohide": true,
+                "children": "Enter e-mail",
+                "className": "secondary",
+                "isOpen": false,
+                "placement": "right",
+                "placementPrefix": "bs-tooltip",
+                "target": "email",
+                "toggle": [Function],
+                "trigger": "click hover focus",
+              },
+              "ref": null,
+              "rendered": "Enter e-mail",
+              "type": [Function],
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  label{
+    font-size: 18px;
+  }
+  input{
+    width: 220px;
+    height: 30px ;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0 15px;
+    ::placeholder{
+      text-align: left;
+    }
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <label
+                htmlFor="phone"
+              >
+                Phone
+              </label>,
+              <input
+                id="phone"
+                placeholder="+7(___) ___-____"
+                type="text"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Phone",
+                "htmlFor": "phone",
+              },
+              "ref": null,
+              "rendered": "Phone",
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "id": "phone",
+                "placeholder": "+7(___) ___-____",
+                "type": "text",
+              },
+              "ref": "phone",
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "rules": Array [
+                "
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  label{
+    font-size: 18px;
+  }
+  input{
+    width: 220px;
+    height: 30px ;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 0 15px;
+    ::placeholder{
+      text-align: left;
+    }
+  }
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Your message",
+              <span>
+                *
+              </span>,
+            ],
+            "className": "subtitle",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Your message",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "*",
+              },
+              "ref": null,
+              "rendered": "*",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "id": "msg",
+            "name": "msg",
+            "placeholder": "Tell us...",
+          },
+          "ref": "msg",
+          "rendered": null,
+          "type": "textarea",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "autohide": true,
+            "children": "Enter message",
+            "isOpen": false,
+            "placement": "top",
+            "placementPrefix": "bs-tooltip",
+            "target": "msg",
+            "toggle": [Function],
+            "trigger": "click hover focus",
+          },
+          "ref": null,
+          "rendered": "Enter message",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Send us",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Send us",
+          "type": "button",
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bwzfXH",
+          "isStatic": true,
+          "rules": Array [
+            "
+  width: 410px;
+  height: 430px;
+  margin: 40px auto;
+  span{
+    color: red;
+  }
+  button{
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 6px 30px;
+    font-size: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  .subtitle{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  textarea{
+    width: 350px;
+    height: 120px;
+    margin-bottom: 40px;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.49);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    resize: none;
+    ::placeholder{
+      text-align: left;
+      font-size: 14px;
+    }
+  }
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bwzfXH",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

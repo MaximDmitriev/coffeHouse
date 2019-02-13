@@ -83,7 +83,7 @@ export default class ItemPage  extends Component {
     error: null
   }
 
-  componentWillMount() {
+  componentDidMount() {
 
     this.setState({loading: true});
 

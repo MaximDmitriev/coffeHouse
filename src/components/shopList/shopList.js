@@ -16,12 +16,12 @@ export default class ShopList extends Component {
   data = new getData();
 
   state = {
-    items: null,
+    items: [],
     loading: false,
     error: null
   }
 
-  componentWillMount() {
+  componentDidMount() {
 
     this.setState({loading: true})
 
@@ -47,7 +47,7 @@ export default class ShopList extends Component {
       return newArray;
 
     } else {
-      return array;
+        return array;
     }
   }
 

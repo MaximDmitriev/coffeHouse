@@ -1,4 +1,4 @@
-function mask(input) {
+const mask = (input) => {
 
     // input.focus();
     input.selectionStart = input.value.length;
@@ -45,4 +45,4 @@ function mask(input) {
     });
 }
 
-export {mask};
+export default mask;
